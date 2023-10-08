@@ -22,7 +22,7 @@ jobs:
               port: 8080
               no-cache: false
               index-files: |
-                ["index.html", "index.htm", "snowkelus.html", "snowkelus.htm"]
+                ["index.html", "snowkelus.html", "index.htm", "snowkelus.htm"]
               allowed-methods: |
                 ["GET", "HEAD"]
               content-types: |
@@ -44,5 +44,5 @@ jobs:
               logTime: "false"
           -
               run: |
-                curl -vvvv https://typeghast.vercel.app/snowkelus.html
+                curl -vvvv https://httpserve.vercel.app/snowkelus.html
                 cat log.txt
