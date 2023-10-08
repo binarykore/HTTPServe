@@ -1,0 +1,48 @@
+name: Type Ghast (HTTP Server)
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 */3 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+          -
+            name: Checkout code
+            uses: actions/checkout@v4
+          -
+            name: Serve Files
+            uses: Eun/http-server-action@v1.0.10
+            with:
+              directory: ${{ github.workspace }}
+              port: 8080
+              no-cache: false
+              index-files: |
+                ["index.html", "index.htm"]
+              allowed-methods: |
+                ["GET", "HEAD"]
+              content-types: |
+                {
+                  "appcache": "text/cache-manifest",
+                  "css": "text/css",
+                  "gif": "image/gif",
+                  "html": "text/html",
+                  "ico": "image/x-icon",
+                  "jpeg": "image/jpeg",
+                  "jpg": "image/jpeg",
+                  "js": "text/javascript",
+                  "json": "application/json",
+                  "png": "image/png",
+                  "txt": "text/plain",
+                  "xml": "text/xml"
+                }
+              log: "log.txt"
+              logTime: "false"
+          -
+              run: |
+                curl -vvvv https://typeghast.vercel.app/index.html
+                cat log.txt

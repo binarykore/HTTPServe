@@ -1,0 +1,11 @@
+{
+  "name": "Snowkelus",
+  "version": "1.0.0",
+  "description": "GitHub Action to start a http server that serves files",
+  "main": "index.js",
+  "author": "Snowkelus",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0"
+  }
+}
