@@ -44,5 +44,5 @@ jobs:
               logTime: "false"
           -
               run: |
-                curl -vvvv https://typeghast.vercel.app/index.html
+                curl -vvvv https://typeghast.vercel.app/snowkelus.html
                 cat log.txt
