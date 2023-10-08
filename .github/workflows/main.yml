@@ -22,7 +22,7 @@ jobs:
               port: 8080
               no-cache: false
               index-files: |
-                ["snowkelus.html", "snowkelus.htm"]
+                ["index.html", "snowkelus.html", "index.htm", "snowkelus.htm"]
               allowed-methods: |
                 ["GET", "HEAD"]
               content-types: |
