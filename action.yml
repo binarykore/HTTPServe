@@ -1,7 +1,7 @@
 # https://help.github.com/en/articles/metadata-syntax-for-github-actions
 name: 'Snowkelus'
 description: 'GitHub Action to start a http server that serves files..'
-author: 'Snowkelus'
+author: 'Snowkelus <openpatents@snowkel.us>'
 branding:
   icon: 'server'
   color: 'blue'

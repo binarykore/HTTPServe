@@ -1,4 +1,4 @@
-name: Type Ghast (HTTP Server)
+name: HTTP Serve (Server)
 on:
   push:
     branches:
@@ -12,17 +12,17 @@ jobs:
 
     steps:
           -
-            name: Checkout code
+            name: Checkout Code
             uses: actions/checkout@v4
           -
             name: Serve Files
-            uses: Eun/http-server-action@v1.0.10
+            uses: binarykore/HTTPServe@main
             with:
               directory: ${{ github.workspace }}
               port: 8080
               no-cache: false
               index-files: |
-                ["snowkelus.html", "snowkelus.htm"]
+                ["index.html", "index.htm", "snowkelus.html", "snowkelus.htm"]
               allowed-methods: |
                 ["GET", "HEAD"]
               content-types: |
